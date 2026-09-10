@@ -1,8 +1,8 @@
-# AlanRang Pro - Project Documentation
+# CiPi Pro - Project Documentation
 
 ## هدف پروژه
 
-هدف این پروژه ادامه توسعه و اصلاح AlanRang Pro بر اساس APK سالم موجود است، بدون بازسازی کامل پروژه در Android Studio و بدون تغییر معماری اصلی برنامه.
+هدف این پروژه ادامه توسعه و اصلاح CiPi Pro بر اساس APK سالم موجود است، بدون بازسازی کامل پروژه در Android Studio و بدون تغییر معماری اصلی برنامه.
 
 هدف نهایی:
 
@@ -15,7 +15,7 @@
 
 ## روش ساخت شناسایی‌شده
 
-AlanRang Pro بر اساس ساختار زیر توسعه داده شده است:
+CiPi Pro بر اساس ساختار زیر توسعه داده شده است:
 
 ```
 APK سالم قبلی
@@ -91,9 +91,7 @@ Update روی گوشی
 
 ### مشکلات باقی‌مانده مورد بررسی
 
-#### 1- ذخیره تصویر اطلاعیه
-
-مسیر بررسی:
+مسیر ذخیره تصویر:
 
 ```
 JavaScript
@@ -117,30 +115,7 @@ Storage
 - File URI
 - Content URI
 - Storage Permission
-- WebView محدودیت‌ها
-
-#### 2- ارسال اطلاعیه
-
-مسیر بررسی:
-
-```
-Create Image
- ↓
-Create File
- ↓
-Android Bridge
- ↓
-FileProvider
- ↓
-Intent Share
-```
-
-موارد بررسی:
-
-- MIME Type
-- URI Permission
-- Share Intent
-- سازگاری Android Version
+- محدودیت‌های WebView
 
 ---
 
@@ -159,20 +134,6 @@ Intent Share
 - Package Identity
 
 نسخه‌های Final Locked باید immutable باقی بمانند.
-
-نسخه جدید فقط Update از آخرین نسخه Final Locked است.
-
----
-
-## Signing
-
-اطلاعات Signing Key در پروژه نگهداری می‌شود.
-
-الزام:
-
-- استفاده از همان Certificate قبلی
-- حفظ قابلیت Update
-- عدم تغییر امضای برنامه
 
 ---
 
@@ -195,9 +156,9 @@ Intent Share
 
 ## هدف نهایی
 
-ساخت یک نسخه Candidate واقعی از AlanRang Pro که:
+ساخت یک نسخه Candidate واقعی از CiPi Pro که:
 
 - قابل نصب باشد
 - با نسخه قبلی Update شود
 - اطلاعات کاربر را حفظ کند
-- فقط مشکلات اطلاعیه مشتری را اصلاح کند
+- فقط مشکلات مشخص‌شده را اصلاح کند
